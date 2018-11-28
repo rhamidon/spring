@@ -32,3 +32,4 @@ spring-*/src/main/java/META-INF/MANIFEST.MF
 
 # Folders
 Servers/
+/.recommenders/
