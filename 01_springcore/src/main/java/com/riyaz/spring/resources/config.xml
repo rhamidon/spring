@@ -58,4 +58,17 @@
 			</map>
 		</property>
 	</bean>
+	
+	<!-- CountriesAndLanguages bean injected using namespace p and properties -->
+	<bean id="clang" class="com.riyaz.spring.model.CountriesAndLanguages">
+		<property name="countryAndLangs">
+			<props>
+				<prop key="USA">English</prop>
+				<prop key="UK">English</prop>
+				<prop key="France">French</prop>
+				<prop key="Spain">Spanish</prop>
+			</props>
+		</property>
+	</bean>
+	
 </beans>
