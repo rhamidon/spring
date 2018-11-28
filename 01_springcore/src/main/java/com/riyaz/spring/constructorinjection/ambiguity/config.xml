@@ -10,8 +10,8 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<bean class="com.riyaz.spring.constructorinjection.ambiguity.Addition" id="addition">
-		<constructor-arg value="10" type="int"/>
-		<constructor-arg value="20" type="int"/>
+		<constructor-arg value="20.3" type="double" index="1"/>
+		<constructor-arg value="10" name="a"/>
 	</bean>
 	
 </beans>
