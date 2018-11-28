@@ -4,9 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class Employee {
 	
-	@Autowired
+	// @Autowired
 	private Address address;
 	private String name;
+
+	@Autowired
+	public Employee(Address address) {
+		this.address = address;
+	}
 
 	public String getName() {
 		return name;
