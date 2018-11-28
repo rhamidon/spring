@@ -3,6 +3,8 @@ package com.riyaz.spring.springcoreadvanced.autowiring.annotations;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class Employee {
+	
+	@Autowired
 	private Address address;
 	private String name;
 
@@ -18,10 +20,10 @@ public class Employee {
 		return address;
 	}
 	
-	@Autowired
+	/*@Autowired
 	public void setAddress(Address address) {
 		this.address = address;
-	}
+	}*/
 
 	@Override
 	public String toString() {
