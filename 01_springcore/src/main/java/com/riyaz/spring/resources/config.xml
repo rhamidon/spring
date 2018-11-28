@@ -12,4 +12,15 @@
 		<property name="id" value="100"/>
 		<property name="name" value="Riyaz Hamidon"/>
 	</bean>
+	
+	<bean id="hospital" class="com.riyaz.spring.model.Hospital">
+		<property name="name" value="Hemas"/>
+		<property name="departments">
+			<list>
+				<value>Front Office</value>
+				<value>HR</value>
+				<value>ER</value>
+			</list>
+		</property>
+	</bean>
 </beans>
