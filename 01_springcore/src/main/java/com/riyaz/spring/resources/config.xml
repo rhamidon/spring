@@ -25,6 +25,7 @@
 		</property>
 	</bean>
 	
+	<!-- CarDealer bean injected using namespace p and set -->
 	<bean id="cardealer" class="com.riyaz.spring.model.CarDealer" p:name="Ferrari">
 		<property name="models">
 			<set>
@@ -32,6 +33,29 @@
 				<value>458 Italia</value>
 				<value>488 GTB</value>
 			</set>
+		</property>
+	</bean>
+	
+	<!-- Customer bean injected using namespace p and set -->
+	<bean id="customer" class="com.riyaz.spring.model.Customer" p:id="1929">
+		<property name="products">
+			<map>
+				<entry key="100" value="iPhone 7" />
+				<entry key="105">
+					<value>Macbook Pro 13</value>
+				</entry>
+				<entry value="iPad Air 3">
+					<key>
+						<value>103</value>
+					</key>
+				</entry>
+				<entry>
+					<key>
+						<value>120</value>
+					</key>
+					<value>Morphi Charger</value>
+				</entry>
+			</map>
 		</property>
 	</bean>
 </beans>
