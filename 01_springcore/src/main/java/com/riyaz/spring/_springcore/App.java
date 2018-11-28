@@ -16,9 +16,11 @@ public class App {
 		
 		// get a bean
 		Employee emp = (Employee) ctx.getBean("emp");
+		Employee emp1 = (Employee) ctx.getBean("emp");
 		System.out.println(emp.getId() + ": " + emp.getName());
 		
 		// close the container
+		System.out.println(emp == emp1);
 		ctx.close();
 	}
 }
