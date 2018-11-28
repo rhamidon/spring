@@ -1,4 +1,4 @@
-package com.riyaz.spring.springcoreadvanced;
+package com.riyaz.spring.springcoreadvanced.autowiring;
 
 /**
  * Hello world!
