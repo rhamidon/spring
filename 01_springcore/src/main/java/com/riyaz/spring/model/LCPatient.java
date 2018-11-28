@@ -16,12 +16,12 @@ public class LCPatient implements InitializingBean, DisposableBean {
 
 	@Override
 	public void destroy() throws Exception {
-		System.out.println(">> on init method");
+		System.out.println(">> on destroy method");
 	}
 
 	@Override
 	public void afterPropertiesSet() throws Exception {
-		System.out.println(">> on destroy method");
+		System.out.println(">> on init method");
 	}
 
 }
