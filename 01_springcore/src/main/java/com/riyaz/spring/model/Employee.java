@@ -1,4 +1,4 @@
-package com.riyaz.spring._springcore;
+package com.riyaz.spring.model;
 
 public class Employee {
 	private int id;

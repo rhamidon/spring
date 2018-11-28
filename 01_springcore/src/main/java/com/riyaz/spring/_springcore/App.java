@@ -2,6 +2,8 @@ package com.riyaz.spring._springcore;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.riyaz.spring.model.Employee;
+
 /**
  * Hello world!
  *
