@@ -2,7 +2,7 @@ package com.riyaz.spring.springcoreadvanced.annotationconfig;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("inst")
 public class Instructor {
 	private int id;
 	private String name;
