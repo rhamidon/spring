@@ -16,6 +16,8 @@
 
 	<bean id="emp"
 		class="com.riyaz.spring.springcoreadvanced.autowiring.Employee"
-		autowire="constructor" />
+		autowire="constructor">
+		<property name="name" value="Max Meyer" />
+	</bean>
 
 </beans>
