@@ -8,11 +8,13 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 	
+	<!-- Employee bean injected using property attributes -->
 	<bean id="emp" class="com.riyaz.spring.model.Employee">
 		<property name="id" value="100"/>
 		<property name="name" value="Riyaz Hamidon"/>
 	</bean>
 	
+	<!-- Hospital bean injected using namespace p and list -->
 	<bean id="hospital" class="com.riyaz.spring.model.Hospital" p:name="Hemas Hospitals">
 		<property name="departments">
 			<list>
@@ -20,6 +22,16 @@
 				<value>HR</value>
 				<value>ER</value>
 			</list>
+		</property>
+	</bean>
+	
+	<bean id="cardealer" class="com.riyaz.spring.model.CarDealer" p:name="Ferrari">
+		<property name="models">
+			<set>
+				<value>LaFerrari</value>
+				<value>458 Italia</value>
+				<value>488 GTB</value>
+			</set>
 		</property>
 	</bean>
 </beans>
