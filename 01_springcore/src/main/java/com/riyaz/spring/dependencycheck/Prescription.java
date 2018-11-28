@@ -2,7 +2,10 @@ package com.riyaz.spring.dependencycheck;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Required;
+
 public class Prescription {
+	
 	private int id;
 	private String name;
 	private List<String> medicines;
@@ -11,6 +14,7 @@ public class Prescription {
 		return id;
 	}
 
+	@Required
 	public void setId(int id) {
 		this.id = id;
 	}

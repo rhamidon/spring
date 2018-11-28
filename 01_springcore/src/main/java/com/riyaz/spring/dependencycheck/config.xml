@@ -9,8 +9,6 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<context:annotation-config />	
-	<bean id="prescription" class="com.riyaz.spring.dependencycheck.Prescription">
-		<property name="id" value="100" />
-	</bean>
+	<bean id="prescription" class="com.riyaz.spring.dependencycheck.Prescription" />
 	
 </beans>
