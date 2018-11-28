@@ -13,6 +13,8 @@ public class ListApp {
 		System.out.println("----------- " + h.getName() + " -----------");
 		for (String dp : h.getDepartments())
 			System.out.println(dp);
+		
+		System.out.println(h.getDepartments().getClass());
 		ctx.close();
 	}
 
