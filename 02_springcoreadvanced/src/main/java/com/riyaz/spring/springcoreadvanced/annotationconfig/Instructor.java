@@ -1,12 +1,17 @@
 package com.riyaz.spring.springcoreadvanced.annotationconfig;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("inst")
 @Scope("prototype")
 public class Instructor {
+	
+	@Value("10")
 	private int id;
+	
+	@Value("Bharath Thippireddy")
 	private String name;
 
 	public int getId() {
