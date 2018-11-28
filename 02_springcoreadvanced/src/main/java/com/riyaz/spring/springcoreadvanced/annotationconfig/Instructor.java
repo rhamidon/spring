@@ -1,8 +1,10 @@
 package com.riyaz.spring.springcoreadvanced.annotationconfig;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("inst")
+@Scope("prototype")
 public class Instructor {
 	private int id;
 	private String name;

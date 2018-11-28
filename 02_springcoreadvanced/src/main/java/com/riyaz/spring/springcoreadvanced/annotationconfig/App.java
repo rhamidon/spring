@@ -8,8 +8,13 @@ public class App {
 	public static void main(String[] args) {
 		AbstractApplicationContext ctx = new ClassPathXmlApplicationContext(
 				"com/riyaz/spring/springcoreadvanced/annotationconfig/config.xml");
+		
 		Instructor it = ctx.getBean("inst", Instructor.class);
+		Instructor it2 = ctx.getBean("inst", Instructor.class);
+		
 		System.out.println(it);
+		System.out.println(it == it2);
+		
 		ctx.close();
 	}
 
