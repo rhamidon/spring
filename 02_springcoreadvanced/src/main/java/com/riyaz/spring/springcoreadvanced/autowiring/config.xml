@@ -16,6 +16,6 @@
 
 	<bean id="emp"
 		class="com.riyaz.spring.springcoreadvanced.autowiring.Employee"
-		autowire="byType" />
+		autowire="byName" />
 
 </beans>
