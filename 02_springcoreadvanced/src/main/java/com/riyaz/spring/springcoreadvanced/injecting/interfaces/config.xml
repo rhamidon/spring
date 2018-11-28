@@ -10,8 +10,10 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<bean class="com.riyaz.spring.springcoreadvanced.injecting.interfaces.OrderDAOImpl" id="orderDao" />
+	<bean class="com.riyaz.spring.springcoreadvanced.injecting.interfaces.OrderDAOImpl2" id="orderDao2" />
+	
 	<bean class="com.riyaz.spring.springcoreadvanced.injecting.interfaces.OrderBOImpl" id="orderBo">
-		<property name="dao" ref="orderDao" />
+		<property name="dao" ref="orderDao2" />
 	</bean>
 
 </beans>
