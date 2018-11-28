@@ -10,9 +10,13 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<context:annotation-config />
-	<bean id="address"
+	<bean id="address1"
 		class="com.riyaz.spring.springcoreadvanced.autowiring.annotations.Address"
 		p:no="123" p:street="Main Street" p:city="NYC" />
+	
+	<bean id="address2"
+		class="com.riyaz.spring.springcoreadvanced.autowiring.annotations.Address"
+		p:no="567" p:street="Main Street" p:city="NYC" />
 
 	<bean id="emp"
 		class="com.riyaz.spring.springcoreadvanced.autowiring.annotations.Employee">
