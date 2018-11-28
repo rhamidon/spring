@@ -14,7 +14,7 @@ public class Instructor {
 	@Value("#{T(Math).abs(10-13)}")
 	private int id;
 
-	@Value("Bharath Thippireddy")
+	@Value("#{'Bharath Thippireddy'.toUpperCase()}")
 	private String name;
 
 	@Value("#{topics}")
