@@ -9,7 +9,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<!-- Employee bean injected using property attributes -->
-	<bean id="emp" class="com.riyaz.spring.model.Employee">
+	<bean id="emp" class="com.riyaz.spring.model.Employee" scope="prototype">
 		<property name="id" value="100"/>
 		<property name="name" value="Riyaz Hamidon"/>
 	</bean>
