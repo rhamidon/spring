@@ -33,4 +33,9 @@ public class ProductDaoImpl implements ProductDao {
 		hibernateTemplate.delete(product);
 	}
 
+	@Override
+	public Product find(int id) {
+		return hibernateTemplate.get(Product.class, id);
+	}
+
 }
