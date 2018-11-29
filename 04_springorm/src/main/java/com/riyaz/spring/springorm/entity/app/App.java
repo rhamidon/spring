@@ -21,7 +21,8 @@ public class App {
 		product.setPrice(799.99);
 		
 		// dao.create(product);
-		dao.update(product);
+		// dao.update(product);
+		dao.delete(product);
 		ctx.close();
 	}
 
