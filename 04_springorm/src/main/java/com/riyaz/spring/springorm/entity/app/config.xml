@@ -4,19 +4,26 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
-    http://www.springframework.org/schema/context/spring-context.xsd">
-
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	<tx:annotation-driven/>
+	
 	<context:property-placeholder
 		location="com/riyaz/spring/springorm/entity/app/db.properties" />
-
+	
+	<!-- DataSource bean -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		p:driverClassName="${db.classname}" p:url="${db.url}"
 		p:username="${db.username}" p:password="${db.password}" />
 
+	<!-- SessionFactory bean -->
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"
 		p:dataSource-ref="dataSource">
@@ -31,5 +38,10 @@
 				<value>com.riyaz.spring.springorm.product.entity.Product</value>
 			</list>
 		</property>
+	</bean>
+	
+	<!-- TransactionManager bean -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 </beans>
