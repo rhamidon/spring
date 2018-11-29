@@ -14,10 +14,12 @@ public class App {
 		EmployeeDAO empDao = ctx.getBean("empDao", EmployeeDAO.class);
 
 		// int result = empDao.create(new Employee(4, "Marco", "Reus"));
-		int update_result = empDao.update(new Employee(1, "James", "Rodriguez"));
 		// System.out.println("records inserted: " + result);
+		// int update_result = empDao.update(new Employee(1, "James", "Rodriguez"));
+		// System.out.println("records updated: " + update_result);
 		
-		System.out.println("records updated: " + update_result);
+		int delete_result = empDao.delete(4);
+		System.out.println("records deleted: " + delete_result);
 		ctx.close();
 	}
 }

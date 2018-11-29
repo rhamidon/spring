@@ -21,6 +21,12 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		return jdbcTemplate.update(sql, e.getFirstName(), e.getLastName(), e.getId());
 	}
 
+	@Override
+	public int delete(int id) {
+		String sql = "delete from employee where id=?";
+		return jdbcTemplate.update(sql, id);
+	}
+
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
