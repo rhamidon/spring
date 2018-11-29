@@ -23,7 +23,9 @@ public class App {
 		// dao.create(product);
 		// dao.update(product);
 		// dao.delete(product);
-		System.out.println(dao.find(3));
+		// System.out.println(dao.find(3));
+		for (Product p : dao.findAll())
+			System.out.println(p);
 		ctx.close();
 	}
 
