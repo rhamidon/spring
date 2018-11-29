@@ -13,8 +13,8 @@
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" 
 		p:driverClassName="${classname}"
-		p:url="${url}" 
-		p:username="${username}" 
+		p:url="${url}"
+		p:username="${uname}"  
 		p:password="${password}" 
 	/>
 	
