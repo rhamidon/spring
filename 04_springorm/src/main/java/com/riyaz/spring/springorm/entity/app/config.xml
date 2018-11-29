@@ -13,6 +13,7 @@
     http://www.springframework.org/schema/tx/spring-tx.xsd">
 	
 	<tx:annotation-driven/>
+	<context:component-scan base-package="com.riyaz.spring.springorm.product.dao.impl" />
 	
 	<context:property-placeholder
 		location="com/riyaz/spring/springorm/entity/app/db.properties" />
@@ -38,6 +39,11 @@
 				<value>com.riyaz.spring.springorm.product.entity.Product</value>
 			</list>
 		</property>
+	</bean>
+	
+	<!-- HibernateTemplate bean -->
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate5.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
 	<!-- TransactionManager bean -->
