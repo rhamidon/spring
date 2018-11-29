@@ -20,7 +20,8 @@ public class App {
 		product.setDesc("iPhone 7 Plus Red");
 		product.setPrice(799.99);
 		
-		dao.create(product);
+		// dao.create(product);
+		dao.update(product);
 		ctx.close();
 	}
 

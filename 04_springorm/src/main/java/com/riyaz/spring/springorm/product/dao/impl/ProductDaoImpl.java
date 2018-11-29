@@ -10,7 +10,7 @@ import com.riyaz.spring.springorm.product.entity.Product;
 
 @Component("productDao")
 public class ProductDaoImpl implements ProductDao {
-	
+
 	@Autowired
 	HibernateTemplate hibernateTemplate;
 
@@ -19,6 +19,12 @@ public class ProductDaoImpl implements ProductDao {
 	public int create(Product product) {
 		Integer result = (Integer) hibernateTemplate.save(product);
 		return result;
+	}
+
+	@Override
+	@Transactional
+	public void update(Product product) {
+		hibernateTemplate.update(product);
 	}
 
 }
