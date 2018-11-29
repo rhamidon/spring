@@ -8,13 +8,28 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-	
-	<context:property-placeholder location="com/riyaz/spring/springorm/entity/app/db.properties"/>
 
-	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" 
-		p:driverClassName="${db.classname}"
-		p:url="${db.url}"
-		p:username="${db.username}"  
-		p:password="${db.password}" 
-	/>
+	<context:property-placeholder
+		location="com/riyaz/spring/springorm/entity/app/db.properties" />
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		p:driverClassName="${db.classname}" p:url="${db.url}"
+		p:username="${db.username}" p:password="${db.password}" />
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"
+		p:dataSource-ref="dataSource">
+		<property name="hibernateProperties" >
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>com.riyaz.spring.springorm.product.entity.Product</value>
+			</list>
+		</property>
+	</bean>
 </beans>
