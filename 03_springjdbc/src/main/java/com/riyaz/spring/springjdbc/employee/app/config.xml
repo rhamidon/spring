@@ -10,6 +10,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<context:property-placeholder location="com/riyaz/spring/springjdbc/employee/app/db.properties"/>
+	<context:component-scan base-package="com.riyaz.spring.springjdbc.employee" />
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" 
 		p:driverClassName="${classname}"
@@ -23,7 +24,7 @@
 	</bean>
 	
 	<!-- EmployeeDAOImpl bean definition -->
-	<bean id="empDao" class="com.riyaz.spring.springjdbc.employee.dao.impl.EmployeeDAOImpl">
+	<!-- <bean id="empDao" class="com.riyaz.spring.springjdbc.employee.dao.impl.EmployeeDAOImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
-	</bean>
+	</bean> -->
 </beans>
