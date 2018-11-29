@@ -17,9 +17,9 @@ public class App {
 		// System.out.println("records inserted: " + result);
 		// int update_result = empDao.update(new Employee(1, "James", "Rodriguez"));
 		// System.out.println("records updated: " + update_result);
-		
-		int delete_result = empDao.delete(4);
-		System.out.println("records deleted: " + delete_result);
+		// int delete_result = empDao.delete(4);
+		// System.out.println("records deleted: " + delete_result);
+		System.out.println(empDao.read(1));
 		ctx.close();
 	}
 }

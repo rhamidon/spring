@@ -3,6 +3,7 @@ package com.riyaz.spring.springjdbc.employee.dao.impl;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.riyaz.spring.springjdbc.employee.dao.EmployeeDAO;
+import com.riyaz.spring.springjdbc.employee.dao.rowmapper.EmployeeRowMapper;
 import com.riyaz.spring.springjdbc.employee.dto.Employee;
 
 public class EmployeeDAOImpl implements EmployeeDAO {
@@ -25,6 +26,12 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	public int delete(int id) {
 		String sql = "delete from employee where id=?";
 		return jdbcTemplate.update(sql, id);
+	}
+
+	@Override
+	public Employee read(int id) {
+		String sql = "select * from employee where id=?";
+		return jdbcTemplate.queryForObject(sql, new EmployeeRowMapper(), id);
 	}
 
 	public JdbcTemplate getJdbcTemplate() {

@@ -6,4 +6,5 @@ public interface EmployeeDAO {
 	int create(Employee e);
 	int update(Employee e);
 	int delete(int id);
+	Employee read(int id);
 }
