@@ -21,7 +21,8 @@ public class UserController {
 	@RequestMapping(value="/processRegister", method=RequestMethod.POST)
 	public ModelAndView processForm(@ModelAttribute("user") User user) {
 		System.out.println(user);
-		ModelAndView mv = new ModelAndView("user-registration");
+		ModelAndView mv = new ModelAndView("registration-result");
+		mv.addObject("user", user);
 		return mv; 
 	}
 }
