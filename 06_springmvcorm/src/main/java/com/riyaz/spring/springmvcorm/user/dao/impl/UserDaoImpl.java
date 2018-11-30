@@ -5,6 +5,7 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.riyaz.spring.springmvcorm.user.dao.UserDao;
+import com.riyaz.spring.springmvcorm.user.entity.User;
 
 @Repository
 public class UserDaoImpl implements UserDao {
@@ -17,5 +18,10 @@ public class UserDaoImpl implements UserDao {
 
 	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
 		this.hibernateTemplate = hibernateTemplate;
+	}
+
+	@Override
+	public int create(User user) {
+		return (int) hibernateTemplate.save(user);
 	}
 }

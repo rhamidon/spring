@@ -1,5 +1,7 @@
 package com.riyaz.spring.springmvcorm.user.services;
 
-public interface UserService {
+import com.riyaz.spring.springmvcorm.user.entity.User;
 
+public interface UserService {
+	int save(User user);
 }
