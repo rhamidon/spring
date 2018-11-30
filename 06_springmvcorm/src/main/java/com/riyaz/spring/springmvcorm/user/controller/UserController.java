@@ -36,4 +36,10 @@ public class UserController {
 		model.addAttribute("result", "user created with id: " + result);
 		return "user-registration";
 	}
+	
+	@RequestMapping("/load")
+	public String loadUsers(ModelMap model) {
+		model.addAttribute("users", service.getUsers());
+		return "user-display";
+	}
 }
