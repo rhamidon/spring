@@ -7,13 +7,13 @@
 <title>User Registration</title>
 </head>
 <body>
-	<form action="registerUser" method="post">
+	<form action="processRegister" method="post">
 		Id: <input type="text" name="id">
-		<br/><br/>
-		Id: <input type="text" name="name">
-		<br/><br/>
-		Id: <input type="email" name="email">
-		<br/><br/>
+		<br/>
+		Name: <input type="text" name="name">
+		<br/>
+		Email: <input type="email" name="email">
+		<br/>
 		<input type="submit" value="Register">
 	</form>
 </body>
