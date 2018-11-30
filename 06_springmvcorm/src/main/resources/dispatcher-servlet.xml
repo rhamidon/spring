@@ -12,8 +12,9 @@
     http://www.springframework.org/schema/tx
     http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+	<!-- <context:property-placeholder location="resources/db.properties" /> -->
 	<context:property-placeholder
-		location="resources/db.properties" />
+		location="classpath:db.properties" />
 
 	<!-- Define ViewResolver -->
 	<bean id="viewResolver"
@@ -50,7 +51,7 @@
 	<bean id="hibernateTemplate"
 		class="org.springframework.orm.hibernate5.HibernateTemplate"
 		p:sessionFactory-ref="sessionFactory" />
-	
+
 	<!-- Define TransactionManager -->
 	<bean id="transactionManager" class="">
 		<property name="sessionFactory" ref="sessionFactory" />
