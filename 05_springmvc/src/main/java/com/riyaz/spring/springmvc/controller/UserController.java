@@ -1,10 +1,10 @@
 package com.riyaz.spring.springmvc.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.riyaz.spring.springmvc.dto.User;
 
@@ -13,16 +13,14 @@ import com.riyaz.spring.springmvc.dto.User;
 public class UserController {
 
 	@RequestMapping("/register")
-	public ModelAndView showForm() {
-		ModelAndView mv = new ModelAndView("user-registration");
-		return mv;
+	public String showForm() {
+		return "user-registration";
 	}
-	
-	@RequestMapping(value="/processRegister", method=RequestMethod.POST)
-	public ModelAndView processForm(@ModelAttribute("user") User user) {
+
+	@RequestMapping(value = "/processRegister", method = RequestMethod.POST)
+	public String processForm(@ModelAttribute("user") User user, ModelMap model) {
 		System.out.println(user);
-		ModelAndView mv = new ModelAndView("registration-result");
-		mv.addObject("user", user);
-		return mv; 
+		model.addAttribute("user", user);
+		return "registration-result";
 	}
 }
