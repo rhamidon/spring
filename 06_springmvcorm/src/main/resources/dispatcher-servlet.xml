@@ -56,7 +56,7 @@
 		p:sessionFactory-ref="sessionFactory" />
 
 	<!-- Define TransactionManager -->
-	<bean id="transactionManager" class="">
+	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 </beans>

@@ -7,6 +7,7 @@
 <title>User Registration</title>
 </head>
 <body>
+	<h2>User Registration</h2>
 	<form action="processRegister" method="post">
 		Id: <input type="text" name="id">
 		<br/>

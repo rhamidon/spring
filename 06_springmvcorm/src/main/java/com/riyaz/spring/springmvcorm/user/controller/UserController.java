@@ -27,7 +27,7 @@ public class UserController {
 	
 	@RequestMapping("/register")
 	public String showForm() {
-		return "user-register";
+		return "user-registration";
 	}
 	
 	@RequestMapping(value="/processRegister", method=RequestMethod.POST)
