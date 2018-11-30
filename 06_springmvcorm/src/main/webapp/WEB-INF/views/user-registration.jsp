@@ -19,5 +19,8 @@
 	</form>
 	
 	<br/> ${result }
+	
+	<br/>
+	<a href="./../">Home</a>
 </body>
 </html>

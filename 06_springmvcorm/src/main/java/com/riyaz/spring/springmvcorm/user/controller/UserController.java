@@ -34,6 +34,6 @@ public class UserController {
 	public String processForm(@ModelAttribute("user") User user, ModelMap model) {
 		int result = service.save(user);
 		model.addAttribute("result", "user created with id: " + result);
-		return "user-register";
+		return "user-registration";
 	}
 }
