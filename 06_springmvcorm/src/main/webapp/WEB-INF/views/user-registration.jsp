@@ -16,5 +16,7 @@
 		<br/>
 		<input type="submit" value="Register">
 	</form>
+	
+	<br/> ${result }
 </body>
 </html>
