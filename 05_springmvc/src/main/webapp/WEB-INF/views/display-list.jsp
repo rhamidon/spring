@@ -10,13 +10,11 @@
 <title>Employee List</title>
 </head>
 <body>
-<h1>Employee List</h1>
-	<%
-		List<Employee> emplist = (List<Employee>) request.getAttribute("employee-list");
-		out.println("<ul>");
-		for (Employee e : emplist)
-			out.println("<li>" + e + "</li>");
-		out.println("</ul>");
-	%>
+	<h1>Employee List</h1>
+	<ul>
+	<c:forEach var="emp" items="${employees }">
+		<li>${emp }</li>
+	</c:forEach>
+	</ul>
 </body>
 </html>

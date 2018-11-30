@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -13,8 +14,7 @@ import com.riyaz.spring.springmvc.dto.Employee;
 public class ListController {
 
 	@RequestMapping("/listEmployee")
-	public ModelAndView sendList() {
-		ModelAndView mv = new ModelAndView("display-list");
+	public String sendList(ModelMap model) {
 		List<Employee> emps = new ArrayList<>();
 		
 		Employee emp1 = new Employee();
@@ -33,8 +33,8 @@ public class ListController {
 		emps.add(emp1);
 		emps.add(emp2);
 		emps.add(emp3);
-		
-		mv.addObject("employee-list", emps);
-		return mv;
+
+		model.addAttribute("employees", emps);
+		return "display-list";
 	}
 }
