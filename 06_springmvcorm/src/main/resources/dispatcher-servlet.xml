@@ -44,7 +44,9 @@
 			</props>
 		</property>
 		<property name="annotatedClasses">
-
+			<list>
+				<value>com.riyaz.spring.springmvcorm.user.entity.User</value>
+			</list>
 		</property>
 	</bean>
 
